@@ -57,15 +57,27 @@
  * }
  */
 func reverseBetween(head *ListNode, left int, right int) *ListNode {
-	tmp := head
+	if left == right {
+		return head
+	}
 	l := left
 	dummy := &ListNode{
 		Val:  0,
 		Next: head,
 	}
-	for {
-
+	pre := dummy
+	for l > 1 {
+		l--
+		pre = pre.Next
 	}
+	cur := pre.Next
+	for i := left; i < right; i++ {
+		tail := cur.Next
+		cur.Next = tail.Next
+		tail.Next = pre.Next
+		pre.Next = tail
+	}
+	return dummy.Next
 }
 
 // @lc code=end
