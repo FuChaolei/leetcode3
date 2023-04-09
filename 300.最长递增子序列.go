@@ -1,3 +1,16 @@
+//go:build ignore
+
+package main
+
+import (
+	"fmt"
+	//"container/list"
+	//"sort"
+	//"math/rand"
+	//"math"
+	//"strings"
+)
+
 /*
  * @lc app=leetcode.cn id=300 lang=golang
  *
@@ -86,6 +99,9 @@ func lower_bound(res []int, num int) int {
 	}
 	return l
 }
+func main() {
+	res := []int{1, 2, 4}
+	fmt.Println(lower_bound(res, 3))
+}
 
 // @lc code=end
-

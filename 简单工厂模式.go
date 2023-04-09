@@ -31,7 +31,6 @@ type abstractFactory struct {
 }
 
 func (factory *abstractFactory) Createfruit(name string) abstractFruiter {
-	//var fruit abstractFactory
 	if name == "apple" {
 		return new(Apple)
 	} else if name == "banana" {
@@ -40,7 +39,6 @@ func (factory *abstractFactory) Createfruit(name string) abstractFruiter {
 	return nil
 }
 func main() {
-	//res := get_res()
 	factory := new(abstractFactory)
 	fruit := factory.Createfruit("apple")
 	fruit.ShowName()

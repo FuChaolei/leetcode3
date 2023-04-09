@@ -63,12 +63,12 @@ public:
         vector<vector<int>> res;
         for (int i = 0; i < n; i++)
         {
-            int l = i + 1, r = n - 1;
-            int t = -nums[i];
             if (i && nums[i] == nums[i - 1])
             {
                 continue;
             }
+            int l = i + 1, r = n - 1;
+            int t = -nums[i];
             while (l < r)
             {
                 if (nums[l] + nums[r] == t)
